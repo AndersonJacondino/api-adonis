@@ -20,11 +20,11 @@ class TweetController {
    * @param {View} ctx.view
    */
   async index () {
-    // usuarios em tweet
-    // const tweets = await Tweet.query()
-    // .with("user")
-    // .fetch();
-    const tweets = await Tweet.all();
+    const tweets = await Tweet.query()
+    .with("user")
+    .fetch();
+    // pegar todos tweets
+    // const tweets = await Tweet.all();
 
     return tweets;
   }
